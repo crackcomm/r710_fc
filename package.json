@@ -1,0 +1,19 @@
+{
+  "esy": {
+    "buildsInSource": true
+  },
+  "dependencies": {
+    "@opam/async": "v0.16.0",
+    "@opam/core": "v0.16.1",
+    "@opam/yojson": "2.1.0",
+    "@opam/merlin-lib": "4.12-414",
+    "ocaml": "4.14.1000"
+  },
+  "resolutions": {
+    "ocaml": "crackcomm/ocaml#f665cab"
+  },
+  "devDependencies": {
+    "@opam/ocamlformat": "*",
+    "@opam/ocaml-lsp-server": "*"
+  }
+}

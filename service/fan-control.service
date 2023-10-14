@@ -1,0 +1,16 @@
+# cp fan-control.service /etc/systemd/system/fan-control.service
+# systemctl enable /etc/systemd/system/fan-control.service
+# systemctl start fan-control.service
+
+[Unit]
+Description=R710 fan control
+
+[Service]
+Restart=always
+RestartSec=1
+StartLimitBurst=100
+TimeoutStartSec=0
+ExecStart=/opt/ocxmr/bin/r710_fc
+
+[Install]
+WantedBy=multi-user.target

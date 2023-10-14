@@ -1,0 +1,24 @@
+(library
+ (name r710_fc)
+ (modules r710_fc)
+ (public_name r710_fc)
+ (libraries async core)
+ (preprocess
+  (pps ppx_jane)))
+
+(library
+ (name os_sensors)
+ (modules os_sensors)
+ (public_name r710_fc.os_sensors)
+ (libraries async core yojson)
+ (inline_tests)
+ (preprocess
+  (pps ppx_jane)))
+
+(executable
+ (name fan_control)
+ (modules fan_control)
+ (public_name r710_fc.fan_control)
+ (libraries r710_fc r710_fc.os_sensors)
+ (preprocess
+  (pps ppx_jane)))
